@@ -327,14 +327,16 @@ input[type="number"] {
     padding: 8px;
 }
 
-.resutadoBi {
+/* ------- RESULTADO DE BI VALIDO ------- */
+
+#resutadoBi_id {
     background-color: rgba(0, 255, 94, 0.103);
     padding: 8px;
     border-radius: 8px;
 }
 
 .resultadoBi_titulo{
-    font-weight: 500;
+    font-weight: 600;
     color: #16A34A;
 }
 
@@ -345,11 +347,12 @@ input[type="number"] {
 
 /* ------- RESULTADO DE BI CADUCADO ------- */
 
-.resutadoBi.caducado{
+#resutadoBi_id.caducado{
     background-color: rgba(255, 9, 5, 0.123);
 }
 
 .resultadoBi_titulo.caducado-t{
+    font-weight: 600;
     color: red;
 }
 
@@ -357,7 +360,7 @@ input[type="number"] {
     color: rgba(255, 9, 5, 0.774);
 }
 
-
+/* ------- FIM DE BI CADUCADO ------- */
 
 .dadosBi {
     display: grid;
@@ -393,6 +396,12 @@ article#validade{
     margin-top: 8px;
     font-weight: 500;
     font-size: small;
+
+    display: none;
+}
+
+#impossivel.activo{
+    display: block;
 }
 
 #voltar{
@@ -404,15 +413,22 @@ article#validade{
     padding: 6px;
     border-radius: 12px;
     border: 1px solid var(--muted);
+
+    display: none;
 }
 
-/* -------- PROPOSTA DE AMRCAÇAO -------- */
+#voltar.activo{
+    display: block;
+}
+
+
+/* -------- PROPOSTA DE MARCAÇAO -------- */
 
 
 #proposta{
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
     
     display: none;
 }
@@ -420,6 +436,11 @@ article#validade{
 #proposta.activo{
     display: block;
 }
+
+#proposta h4{
+    color: var(--text);
+}
+
 
 #proposta .form_group-proposta{
     display: grid;
@@ -431,7 +452,12 @@ article#validade{
         flex-direction: column;
         gap: 4px;
         color: var(--muted);
+
     }
+}
+
+#proposta .form_group-proposta div > span{
+    font-size: 14px;
 }
 
 #proposta label{
@@ -449,6 +475,7 @@ article#validade{
     border-radius: 8px;
     font-size: medium;
     font-weight: 500;
+    margin-top: 12px;
 
     transition: scale .3s ease-in-out;
 }
@@ -464,9 +491,11 @@ article#validade{
 
 
 
-
-
-/* --------- INFORMACOES GERAIS -------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* --------- INFORMACOES GERAIS --------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
 
 .Informacoes {
     background-color: var(--dark);
@@ -485,4 +514,57 @@ article#validade{
 .Informacoes .desc-informacoes {
     max-width: 768px;
     color: var(--muted);
+}
+
+#cards-infor{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+}
+
+.card-infor{
+    background-color: var(--back-0);
+
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(10, 10, 10, 0.04);
+    /* transition: transform .25s ease, box-shadow .25s ease; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+}
+
+.card-infor h4{
+    color: var(--text);
+}
+
+.card-infor div{
+    display: flex;
+    flex-direction: column;
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* --------- BI PARA MENORES --------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+
+#menores{
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#menores p{
+    color: whitesmoke;
+   
+    letter-spacing: 1px;
+    max-width: 768px;
 }

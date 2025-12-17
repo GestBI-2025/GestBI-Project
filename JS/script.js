@@ -71,30 +71,6 @@ function validarform(event) {
 }
 
 
-// --------------- TROCA DE FORMULARIOS ------------------
-
-const verificarBtn = document.getElementById("verificarBtn");
-const cancelarBtn = document.getElementById("cancelarBtn");
-const verificarForm = document.getElementById("verificarForm")
-const cancelarForm = document.getElementById("cancelarForm")
-
-
-verificarBtn.onclick = () => {
-    verificarBtn.classList.add("activo")
-    cancelarBtn.classList.remove("activo")
-    verificarForm.classList.add("activo")
-    cancelarForm.classList.remove("activo")
-}
-
-cancelarBtn.addEventListener("click", () => {
-    cancelarBtn.classList.add("activo")
-    verificarBtn.classList.remove("activo")
-    verificarForm.classList.remove("activo")
-    cancelarForm.classList.add("activo")
-})
-
-
-
 
 // --------- VALIDAÇÃO DO FORMULÁRIO DE VERIFICAR BI ---------
 
@@ -113,13 +89,16 @@ function verficar(event) {
     const detalhe = document.getElementById("detalhe");
 
     const dados_cidadao = document.getElementById("dados-cidadao");
-    const resutadoBi = document.getElementById("resutadoBi")
+    const resutadoBi = document.getElementById("resutadoBi_id")
     const resultadoBi_titulo = document.querySelector(".resultadoBi_titulo")
     const content_res = document.querySelector(".content_res")
     const proposta = document.getElementById("proposta")
+    const impossivel = document.getElementById("impossivel")
+    const voltar = document.getElementById("voltar")
 
-    let nifEx = "000000000LA000";
-    let nif = "111111111LA111";
+
+    let nifValido = "000000000LA000";
+    let nifCaducado = "111111111LA111";
 
     if (validarBI(numeroBi)) {
         detalhe.classList.remove("aviso")
@@ -129,21 +108,41 @@ function verficar(event) {
         numBi.classList.add("aviso")
     }
 
+
+
     // ------BI VALIDO ------- //
-    if (numeroBi === nifEx) {
+    if (numeroBi === nifValido) {
         dados_cidadao.classList.add("verDados")
+        impossivel.classList.add("activo")
+        voltar.classList.add("activo")
         verificarForm.classList.remove("activo")
+
+        resutadoBi.classList.remove("caducado")
+        resultadoBi_titulo.classList.remove("caducado-t")
+        content_res.classList.remove("caducado-c")
+        proposta.classList.remove("activo")
+
+
+
+
+        resultadoBi_titulo.textContent = "Bilhete de Identidade Válido"
+        content_res.textContent = "O seu documento ainda está no prazo de validade. Não necessita de renovação neste momento."
     }
 
+
     // ------BI CADUCADO ------- //
-    if (numeroBi === nif) {
+    if (numeroBi === nifCaducado) {
         dados_cidadao.classList.add("verDados")
         verificarForm.classList.remove("activo")
-
         resutadoBi.classList.add("caducado")
         resultadoBi_titulo.classList.add("caducado-t")
         content_res.classList.add("caducado-c")
         proposta.classList.add("activo")
+        impossivel.classList.remove("activo")
+        voltar.classList.add("activo")
+
+        resultadoBi_titulo.textContent = "Em via de renovação"
+        content_res.textContent = "O seu bilhete de identidade já encontra-se caducado. Pode proceder a marcação."
     }
 
 
@@ -200,6 +199,43 @@ function cancelar(event) {
 
 // --------- PROPOSTA DE MARCACAO ----------
 
-function espostaMarcacao(event){
+function espostaMarcacao(event) {
     event.preventDefault();
 }
+
+
+
+// --------------- TROCA DE FORMULARIOS ------------------
+
+const verificarBtn = document.getElementById("verificarBtn");
+const cancelarBtn = document.getElementById("cancelarBtn");
+const verificarForm = document.getElementById("verificarForm")
+const cancelarForm = document.getElementById("cancelarForm")
+const dados_cidadao = document.getElementById("dados-cidadao");
+const inputNumeroBi = document.getElementById("numeroBi").value;
+const resultado = document.getElementById("resultado");
+const h4 = document.getElementById("h4");
+const p = document.getElementById("p");
+
+
+verificarBtn.onclick = () => {
+    verificarBtn.classList.add("activo")
+    cancelarBtn.classList.remove("activo")
+    verificarForm.classList.add("activo")
+    cancelarForm.classList.remove("activo")
+    dados_cidadao.classList.remove("verDados")
+    const inputNumeroBi = document.getElementById("numeroBi").value = '';
+}
+
+cancelarBtn.addEventListener("click", () => {
+    cancelarBtn.classList.add("activo")
+    verificarBtn.classList.remove("activo")
+    verificarForm.classList.remove("activo")
+    cancelarForm.classList.add("activo")
+    dados_cidadao.classList.remove("verDados")
+    const inputNumeroRef = document.getElementById("numeroRef").value = ''
+    // const resultado = document.getElementById("resultado").classList.remove; COMO REMOVER CLASSES
+
+    resultado.classList.remove("NaoCancelado")
+    resultado.classList.remove("cancelado")
+})

@@ -1,7 +1,13 @@
 /* ---------- RESPONSIVIDADE ---------- */
 
-/* small screens */
+/* ---------- TELAS LARGAS ---------- */
 @media screen and (max-width:992px) {
+    #cards-infor{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sobre-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .cards-grid {
         grid-template-columns: repeat(2, 1fr)
     }
@@ -15,10 +21,10 @@
     }
 }
 
-/* mobile nav behaviour */
+/* ---------- TELAS LARGAS ---------- */
 @media screen and (max-width:860px) {
 
-    .container{
+    .container {
         padding: 44px 8px;
     }
 
@@ -70,7 +76,7 @@
     }
 
     .cards-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: repeat(2, 1fr)
     }
 
     .logo-text {
@@ -92,11 +98,49 @@
         padding: 8px 6px
     }
 
+    .sobre-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .contacto-area {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .contact-form{
+    .contact-form {
         padding: 24px 8px;
     }
+
+    /* #cards-infor{
+        grid-template-columns: repeat(1, 1fr);
+    } */
+
+    #proposta .form_group-proposta {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* ---------- MEDIUM SCREENS ---------- */
+
+@media screen and (max-width:768px){
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    #cards-infor{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ---------- TELAS PEQUENAS ---------- */
+
+@media screen and (max-width:576px){
+
+     .cards-grid {
+        grid-template-columns: 1fr
+    }
+
+    #cards-infor{
+        grid-template-columns: repeat(1, 1fr);
+    } 
 }

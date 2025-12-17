@@ -31,7 +31,7 @@
                 </button>
 
                 <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
 
                     <li class="nav-item details-wrapper" id="services-wrapper">
 
@@ -42,10 +42,10 @@
                             </summary>
 
                             <div class="dropdown">
-                                <a href="#" class="service-link">
+                                <a href="marcacao.html" target="_self" class="service-link">
                                     Marcação
                                 </a>
-                                <a href="#" class="service-link">
+                                <a href="informacao.html" target="_self" class="service-link">
                                     Informações Gerais
                                 </a>
                                 <a href="#" class="service-link">
@@ -55,12 +55,12 @@
                         </details>
                     </li>
 
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
 
                 <div class="nav-right">
-                    <a href="#" class="btn btn-marcacao" id="cta-top">Marcar
+                    <a href="marcacao.html" class="btn btn-marcacao" id="cta-top">Marcar
                         agora</a>
                 </div>
             </nav>
@@ -77,15 +77,92 @@
                 </p>
             </section>
 
-            <section id="cards-infor">
-                <article>
-                    <span class="icon">
-                        
-                    </span>
+            <section id="cards-infor" class="container">
+                <article class="card-infor">
+                    <span class="icon-infor"> &circlearrowleft;</span>
+                    <h4>Prazo de Entrega</h4>
+                    <div>
+                        <span>Normal: 15 dias uteis</span>
+                        <span>Urgente: 5 dias uteis</span>
+                    </div>
+                </article>
+                <article class="card-infor">
+                    <span class="icon-infor">&circlearrowleft;</span>
+                    <h4>Validade</h4>
+                    <div>
+                        <span>Adulto: 8 anos</span>
+                        <span>Urgente: 4 anos</span>
+                    </div>
+                </article>
+                <article class="card-infor">
+                    <span class="icon-infor">&circlearrowleft;</span>
+                    <h4>Emolumentos</h4>
+                    <div>
+                        <span>Primeira via: Gratuito</span>
+                        <span>Renovação: kz 000,00</span>
+                    </div>
                 </article>
             </section>
 
+            <section id="primeiraVia" class="container">
+                <h2>Primeira via (Cidadãos Maiores de Idade)</h2>
+                <div>
+                    <p>A primeira emissão do bilhete de identidade e um direito de todos cidadãos angolanos e é isenta de custos.</p>
+                    <article id="documentos">
+                        <h3>Documentos Necessário:</h3>
+                        <ul>
+                            <li>Assento de Nascimento.</li>
+                            <li>Presença física do requerente para recolha dos dados biométricos.</li>
+                            <li>Atestado de residência (emitido pela administração local).</li>
+                        </ul>
+                    </article>
+                </div>
 
+                <p id="nota">
+                    Nota: Para cidadãos menores de idade, consulta a secção especifica de <strong>
+                        <a href="bimenores.html">BI para menores</a>
+                    </strong>
+                </p>
+            </section>
+
+            <section id="renovacao" class="container">
+                <h2>Renovação do BI</h2>
+                <div>
+                    <p>A renovação deve ser feita quando o documento caduca, ou quando há alteração de dados pessoais (estado civil, residência, etc...).</p>
+
+                    <article id="requisitos">
+                        <h3>Requisitos:</h3>
+                        <ul>
+                            <li>A presença do Bilhete de Identidade caducado ou a caducar. </li>
+                            <li>Assento de nascimento (Apenas se houver alteração de dados como nome  ou filhação).</li>
+                            <li>Comprovativo de pagamento da tua taxa de renovação.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            
+            <section id="segundaViaDuplicado" class="container">
+                <h2>Segunda Via (Duplicado)</h2>
+                <div>
+                    <p>Solicitada em casos de extravio, roubo, ou má conservação do documento original.</p>
+
+                    <article id="requisitosSegundaVia">
+                        <h3>Requisitos:</h3>
+                        <ul>
+                            <li>Participação policial (em caso de roubo ou extravio). </li>
+                            <li>Cópia do BI antigo (se possuir) ou assento de nascimento.</li>
+                            <li>Comprovativo de pagamento da tua taxa de emissão da 2ª via.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section id="convite" class="container">
+                <h2>Pronto para tratar o seu documento?</h2>
+                <a href="marcacao.html">
+                    Marcar Atendimento &RightArrow; 
+                </a>
+            </section>
 
         </main>
 

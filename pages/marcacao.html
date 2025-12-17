@@ -113,6 +113,8 @@
                     </button>
                 </form>
 
+                <!-- ------------ SECTION  DADOS CIDADAO ------------ -->
+
                 <section id="dados-cidadao">
                     <h3>
                         Dados do Cidadão
@@ -120,8 +122,8 @@
 
                     <div class="div-cont">
 
-                        <article class="resutadoBi " id="resutadoBi">
-                            <p class="resultadoBi_titulo ">
+                        <article class="resutadoBi " id="resutadoBi_id">
+                            <p class="resultadoBi_titulo">
                                 Bilhete de Identidade
                                 Válido
                             </p>
@@ -132,6 +134,7 @@
                             </span>
                         </article>
 
+                        <!-- ------- DAODS DO CIDADAO --------- -->
                         <article class="dadosBi">
                             <div class="form-group-bi">
                                 <label for="nome">Nome Completo</label>
@@ -173,8 +176,12 @@
                             </p>
 
                         </article>
+                        <!-- ------------ FIM DADOS DO CIDADAO ------------ -->
 
-                        <form action="#" method="post" id="proposta" onsubmit="return respostaMarcacao(event)">
+                        <!-- ------------ PROPOSTA DE MARCACAO ------------ -->
+                        <form action="#" method="post" id="proposta"
+                            onsubmit="return respostaMarcacao(event)">
+                            <h4>Proposta de Marcação</h4>
                             <div class="form_group-proposta">
 
                                 <div>
@@ -193,17 +200,23 @@
                             </div>
 
                             <button type="button"
-                                id="confirmarMarcacao">Confirmar
-                                Marcação</button>
-                            <button type="button"
-                                id="cancelarMarcacao">Cancelar</button>
+                                id="confirmarMarcacao">
+                                Confirmar Marcação
+                            </button>
+                            <button type="button" id="cancelarMarcacao">
+                                Cancelar
+                            </button>
                         </form>
+
+                        <!-- ------------ PROPOSTA DE MARCACAO ------------ -->
 
                         <a href="../index.html" id="voltar">
                             Voltar
                         </a>
                     </div>
                 </section>
+
+                <!-- ------------ FORMULARIO DE CANCELAR ------------ -->
 
                 <form action="#" method="POST" id="cancelarForm"
                     class="cancelar form" onsubmit="return cancelar(event)"

@@ -18,7 +18,6 @@
     margin: 0;
     font-family: "Roboto", sans-serif;
     list-style: none;
-
 }
 
 /* ANIMAÇÃO */
@@ -466,6 +465,16 @@ body {
     background-color: var(--accent);
 }
 
+.footer-grid div:first-child p{
+    font-size: small;
+}
+
+.footer_card ul li a, .footer_card address{
+    font-size: 14px;
+}
+
+
+
 .site-footer a {
     color: var(--muted);
     text-decoration: none;
@@ -478,4 +487,5 @@ body {
     text-align: center;
     color: #9aa3b2;
     padding: 12px;
+    font-size: smaller;
 }
