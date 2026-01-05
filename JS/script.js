@@ -70,8 +70,6 @@ function validarform(event) {
 
 }
 
-
-
 // --------- VALIDAÇÃO DO FORMULÁRIO DE VERIFICAR BI ---------
 
 function validarBI(numeroBi) {
