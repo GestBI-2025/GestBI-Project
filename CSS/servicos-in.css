@@ -838,6 +838,10 @@ article#validade {
     .site-footer{
         display: none !important;
     }
+
+    .form-group-dados{
+        width: 70%;
+    }
 }
 
 .form-group-dados {

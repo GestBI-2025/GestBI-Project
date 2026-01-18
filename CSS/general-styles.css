@@ -303,22 +303,23 @@ body {
 .services {
     background: transparent;
     text-align: center;
+    display: flex;
+    gap: var(--gap-16);
+    flex-direction: column;
 }
 
 .services h2 {
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 10px;
 }
 
 .services .desc {
     color: var(--muted);
-    margin-bottom: 30px
 }
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     margin-top: 20px;
 }
@@ -338,6 +339,40 @@ body {
 
 .card p {
     color: var(--muted);
+}
+
+#conviteMenores {
+    border-radius: var(--gap-12);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-8);
+    padding: var(--gap-8);
+    box-shadow: 0 8px 20px rgba(10, 10, 10, 0.04);
+    background-color: var(--dark);
+}
+
+#conviteMenores h2 {
+    color: var(--bg);
+    font-weight: 400;
+    font-size: var(--text-20);
+}
+
+#conviteMenores div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-8);
+    color: var(--muted);
+}
+
+#conviteMenores div a {
+    color: var(--bg);
+    background-color: red;
+    padding: 6px;
+    border-radius: var(--gap-8);
+    width: 100%;
+    text-align: center;
 }
 
 .card:focus,
